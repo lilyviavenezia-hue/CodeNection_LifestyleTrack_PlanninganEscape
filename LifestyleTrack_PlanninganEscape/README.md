@@ -4,7 +4,7 @@
 
 **Problem Statement:** Travel Planner
 
-**Video Presentation:** \[Unlisted Youtube Link\]
+**Video Presentation:** \[https://youtu.be/YIAlA8pIciw\]
 
 **Presentation Slides:** \[https://canva.link/qmqjo18ksagqtop\]
 
@@ -56,24 +56,35 @@ Our solution is an all-in-one travel app designed to manage the entire lifecycle
 ### **2.2 Ideation Boards**
 
 **Mind Map**
-![mindmap]()
+![Mind Map](docs/mindmap.png)
 This mind map shows the overall structure of the app, branching from the core concept into its major feature clusters: Trip Setup and AI Recommendations, Leave Optimizer, Itinerary, Group Collaboration Tools, Real-time Disruption Handling, Expense and Bill Splitting, and Travel Essentials Hub. Each branch is broken down further into its sub-features, giving an overview of how the individual ideas fit together into one solution.
 
-**User Flow Diagram (Solo Traveller Mode)**
-![uderflowdiagram]()
- 
+**User Flow Diagram (Solo Traveller Mode - Part 1)**
+![userflowdiagram](docs/flow%201.png)
+###
+**User Flow Diagram (Solo Traveller Mode - Part 2)**
+![userflowdiagram](docs/flow%202.png)
+###
+**User Flow Diagram (Solo Traveller Mode - Part 3)**
+![userflowdiagram](docs/flow%203.png)
+
 This diagram traces the screen-by-screen journey of a solo traveller, from opening the app and signing in, through selecting travel dates (either self-chosen or drawn from the Leave Optimizer), to entering a destination, preferences, and comfort settings. It then follows itinerary generation, review and editing, and concludes with a budget review and an optional checklist before the trip is confirmed. Following on from trip confirmation, this section shows the ongoing disruption-monitoring loop: the system continuously checks whether a disruption has occurred (flight delay, weather, or restaurant closure); if so, the user selects the affected issue, reviews the impacted bookings, and the itinerary updates automatically before returning to the confirmed state.
 
-**User Flow Diagram (Group Travellers Mode)**
-![uderflowdiagram2]()
+**User Flow Diagram (Group Travellers Mode - Part 1)**
+![userflowdiagram2](docs/flow%204.png)
+**User Flow Diagram (Group Travellers Mode - Part 2)**
+![userflowdiagram2](docs/flow%205.png)
+**User Flow Diagram (Group Travellers Mode - Part 3)**
+![userflowdiagram2](docs/flow%206.png)
+
 The diagram shows the stage by stage of group-mode planning, the processes are almost the same as solo traveller mode. One of the differences is there will be a group chat for communication across the group. Moreover, the members can raise disagreements through comments or polls where needed before the host edits and confirms the finalized trip. Furthermore, there is a feature about splitting the bill either even split or itemized split, and the bill is settled among members.
 
-**Use case Diagram**
-![usecasediagram]()
+**Use Case Diagram**
+![usecasediagram](docs/usecasediagram.png)
 The diagram maps system capabilities across two main actors, which are the Traveller and the AI Travel Assistant. The Traveller role, which involves Trip Hosts, Invited Users, and Solo Travellers, accesses common features (such as registration, chat, viewing itineraries and summaries, submitting feedback, managing expenses, and viewing checklists), host-specific tasks (creating trips, editing summaries, finalizing itineraries, managing budgets, and initiating re-planning), and role-specific options (joining or leaving a trip and planning solo). Operating as a separate backend actor, the AI Travel Assistant manages automated tasks including conversation analysis, data extraction, preference and conflict identification, summary generation, and re-planning assistance.
 
 **Sequence Diagram (Group Travellers Mode)**
-![sequencediagram]()
+![sequencediagram](docs/sequencediagram.png)
 ### 
 
 This diagram shows the message flow triggered when a user sends trip-related information into the group chat. The system stores the message, after which the AI Travel Assistant retrieves the recent conversation history, extracts preferences using natural language understanding, and flags any conflicts between members. The resulting trip preference summary is sent to the host for review, editing, and confirmation; once confirmed, the host requests itinerary creation, and the system generates a chronological itinerary from the validated summary, which is then displayed to the group as the official plan.
@@ -90,7 +101,7 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>1. Group Chat</strong>
-<img src="">
+<img src="docs/figma 1.png">
 <ul>
 <li>Expenses: Track and manage expenses throughout the trip, including shared costs and bill splitting.</li>
 <li>Favourites: Access a centralized collection of attractions, restaurants, activities, and other places saved by your group.</li>
@@ -102,7 +113,7 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>2. Trip Summary</strong>
-<strong><img src=""></strong>
+<strong><img src="docs/figma 2.png"></strong>
 <ul>
 <li>AI-Powered Summary: Continuously analyse the group conversation to identify confirmed details such as destinations, dates, budget, group size, and other planning decisions, then automatically consolidate them into a centralised trip summary, eliminating the hassle of scrolling through long chat conversations and manually keeping track of group decisions.</li>
 <li>Trip Readiness Progress: A live progress bar shows how far the group has progressed and highlights what still needs to be decided. Users can tap the summary to expand it and view the complete trip details.</li>
@@ -116,7 +127,8 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>3. Leave Optimizer</strong>
-<strong><img src=""></strong>
+<br>
+<img src="docs/figma 3.png" alt="Leave Optimizer">
 <ul>
 <li>Interactive Calendar: Tap and drag across dates to mark your busy periods in red.</li>
 <li>Leave Balance Tracker: Input your total annual leave and view your remaining balance instantly in the top right corner.</li>
@@ -126,8 +138,9 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>4. Itinerary</strong>
-<strong><img src=""></strong>
-<strong><img src=""></strong>
+<br>
+<strong><img src="docs/figma 4.png"></strong>
+<strong><img src="docs/figma 4(2).png"></strong>
 <ul>
 <li>Instant Smart Itinerary: Get a personalized day-by-day itinerary generated by AI based on your trip details, preferences, and requirements, without planning everything from scratch.</li>
 <li>Effortless Drag-and-Drop Swaps: Not a fan of a scheduled activity? Browse alternative recommendations in the sidebar and simply drag and drop a new activity onto the existing one to replace it instantly.</li>
@@ -137,7 +150,7 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>5. Replan</strong>
-<strong><img src=""></strong>
+<strong><img src="docs/figma 5.png"></strong>
 <ul>
 <li>Automated vs. Manual Disruption Detection: Flight issues are flagged automatically, while other ground-level updates may require manual user reporting.</li>
 <li>Impact Analysis &amp; Guided Actions: Surfaces downstream effects on affected bookings, such as hotel check-ins, transit, and reservations, while offering quick recovery actions like rebooking flights or requesting refunds.</li>
@@ -148,7 +161,7 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>6. Track Expenses</strong>
-<strong><img src=""></strong>
+<strong><img src="docs/figma 6.png"></strong>
 <ul>
 <li>Instant Receipt Scanning: Scan physical receipts using your camera or upload from your gallery to automatically digitize items, prices, and totals.</li>
 <li>Granular Assignment &amp; Custom Splits: Assign specific expenses to individual members or adjust custom percentages at the bottom when an even split doesn't apply.</li>
@@ -161,7 +174,8 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>7. Flexible Preference Capture Hub</strong>
-<strong><img src=""></strong>
+<br>
+<strong><img src="docs/figma 7.png"></strong>
 <ul>
 <li>Multiple Input Methods: Easily input your travel preferences by speaking into the microphone to record your thoughts, typing out text, or taking a quick interactive quiz.</li>
 <li>Instant Itinerary Generation: Tap the central generation button to translate your preferences into a customized travel plan immediately.</li>
@@ -170,7 +184,8 @@ This diagram shows the message flow triggered when a user sends trip-related inf
 
 <tr><td>
 <strong>8. Comfort Settings</strong>
-<strong><img src=""></strong>
+<br>
+<strong><img src="docs/figma 8.png"></strong>
 <ul>
 <li>Tailored for Relaxed Paces: Designed specifically for trips involving elderly travelers, young children, or those seeking a slower, low-stress pace.</li>
 <li>Walking &amp; Activity Limits: Adjust the maximum walking distance between stops (from 5 to 30 minutes) and set a daily maximum cap on scheduled activities.</li>
@@ -236,7 +251,8 @@ Oracle SQL Database was selected to store and organize user profiles, trip itine
 
 For API and third-party services, an AI model like the Gemini API is being considered to generate itineraries, combine group preferences, and re-plan schedules around disruptions because of its generous free tier for student prototyping. However, the main constraints of the Gemini free tier are strict rate limits (typically capped at 10 to 15 requests per minute depending on the model). For location-based features such as searching attractions, calculating walking distance, and showing transit options, Geoapify is proposed instead of Google Maps Platform, as it offers similar places search, geocoding, and routing functionality without requiring a credit card to activate its free tier. The main constraint is that Geoapify's place database is smaller than Google's, so some newer or smaller local businesses may not appear in search results. For the Leave Optimizer's public holiday calendar, Nager.Date is proposed, since it is a completely free API that requires no sign-up or API key and returns public holiday data for most countries.
 
-### **System architecture diagram**
+### **System Architecture diagram**
+![System Architecture Diagram](docs/architecture.png)
 
 ### 
 
