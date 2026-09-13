@@ -283,5 +283,3 @@ For API and third-party services, an AI model like the Gemini API is being consi
 | Multi-language support | Single-language (English) build only |
 | Native iOS/Android build | Flutter Web only |
 | Push notification/rich reminders | Basic Firebase hookup for one alert type only, not a full notification settings |
-
-###
